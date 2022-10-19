@@ -68,3 +68,38 @@ body {
 .score-color {
     color: #EC8A3C;
 }
+
+.blue-background {
+    display: none;
+    background-color: #27345C!important;
+}
+
+.display-none {
+    display: none;
+}
+
+.mobile-logo {
+    height: 50px;
+}
+
+@media(max-width:704px) {
+    .nav-background {
+        display: none;
+    }
+
+    .blue-background {
+        display: flex;
+    }
+}
+
+@media (max-width: 532px) {
+    .card-body {
+        width: auto;
+        height: auto;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .card-container {
+        width: 100vw;
+    }
+}
