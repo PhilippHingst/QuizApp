@@ -31,6 +31,7 @@ function gameIsOver() {
 
 function showEndScreen() {
     document.getElementById('endScreen').style = "";
+    document.getElementById('trophy').style = "";
     document.getElementById('questionScreen').style = "display:none";
     AUDIO_ENDSCREEN.play();
 }
@@ -45,10 +46,10 @@ function updateProgressBar() {
 
 function showQuestionAndAnswer(question) {
     document.getElementById('questiontext').innerHTML = question['question'];
-    document.getElementById('answer_1').innerHTML = question['answer_1'];
-    document.getElementById('answer_2').innerHTML = question['answer_2'];
-    document.getElementById('answer_3').innerHTML = question['answer_3'];
-    document.getElementById('answer_4').innerHTML = question['answer_4'];
+    document.getElementById('answer_1').innerHTML = `<div class="answer-letter"><span class="answer-letter-font">A</span></div><div class="answer">${question['answer_1']}</div>`;
+    document.getElementById('answer_2').innerHTML = `<div class="answer-letter"><span class="answer-letter-font">B</span></div><div class="answer">${question['answer_2']}</div>`;
+    document.getElementById('answer_3').innerHTML = `<div class="answer-letter"><span class="answer-letter-font">C</span></div><div class="answer">${question['answer_3']}</div>`;
+    document.getElementById('answer_4').innerHTML = `<div class="answer-letter"><span class="answer-letter-font">D</span></div><div class="answer">${question['answer_4']}</div>`;
 }
 
 function answer(selection) {
@@ -95,9 +96,14 @@ function resetAnswerButtons() {
 
 function restartGame() {
     document.getElementById('endScreen').style = "display:none";
+    document.getElementById('trophy').style = "display:none";
     document.getElementById('questionScreen').style = "";
     rightQuestions = 0;
     currentQuestion = 0;
     init();
 }
 
+function startGame() {
+    document.getElementById('startScreen').style = "display:none";
+    document.getElementById('questionScreen').style = "";
+}

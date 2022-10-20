@@ -2,6 +2,23 @@ body {
     background-color: #FEFAEF;
 }
 
+a:hover {
+    cursor:default
+}
+
+.answer-font {
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    
+}
+
+.answer {
+    margin-left: 20px;
+}
+
 .card-container {
     height: 100vh;
     display: flex;
@@ -11,8 +28,9 @@ body {
 
 .card {
     background-color: #F7F7F7!important;
-    
+   
 }
+
 
 .card-containers{
     width: 500px;
@@ -22,6 +40,8 @@ body {
 .card-left-border{
     border-top-left-radius: 0px !important;
     border-bottom-left-radius: 0px !important;
+    background-image: url(./img/brainbg.jpg);
+    background-position: center;
 }
 
 .question-footer {
@@ -32,9 +52,33 @@ body {
     padding-top: 20px;
 }
 
+.answer-letter {
+    background-color: rgb(197, 194, 194);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.answer-letter-font {
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.quiz-answer-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    
+}
+
 .quiz-answer-card:hover {
  cursor: pointer;
- background-color: rgb(212, 212, 212)!important;
+ background-color: rgb(189, 189, 189)!important;
+ 
 }
 
 .bg-success , .bg-danger {
@@ -69,9 +113,35 @@ body {
     color: #EC8A3C;
 }
 
+.orange {
+    background-color: #EC8A3C !important;
+    border: transparent!important;
+}
+
+.orange:hover {
+    transform: scale(1.1);
+}
+.start-screen {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+}
 .blue-background {
     display: none;
     background-color: #27345C!important;
+    
+}
+
+.endscreen-container {
+    display: flex;
+}
+
+.trophy-img {
+    position: absolute;
+    right: 0;
+    
 }
 
 .display-none {
@@ -101,5 +171,33 @@ body {
     }
     .card-container {
         width: 100vw;
+    }
+    .start-screen {
+        height: 500px;
+        width: auto;
+    }
+}
+
+@media (max-width: 800px) {
+    .trophy-img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 478px) {
+    .trophy-img {
+        height: 100px;
+    }
+}
+
+@media (max-width: 354px) {
+    .trophy-img {
+        height: 70px;
+    }
+}
+
+@media (max-width: 294px) {
+    .trophy-img {
+        height: 50px;
     }
 }
